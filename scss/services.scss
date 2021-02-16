@@ -1,0 +1,60 @@
+.services {
+	padding: 60px 0;
+
+	@media (min-width: 576px) {
+		padding: 80px 0;
+	}
+
+	@media (min-width: 992px) {
+		padding: 100px 0;
+	}
+}
+
+.services__wrapper {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	text-align: center;
+
+	@media (min-width: 992px) {
+		flex-wrap: nowrap;
+	}
+}
+
+.servicesBlock__item {
+	margin-bottom: 30px;
+
+	@media (min-width: 576px) {
+		width: 181px;
+	}
+
+	@media (min-width: 768px) {
+		width: 241px;
+	}
+
+	&Image {
+		margin: 0 auto;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		border: 1px solid grey;
+	}
+
+	&Title {
+		padding: 30px 0;
+		text-transform: uppercase;
+		@include font("Open Sans semibold", 16, 800, black);
+	}
+
+	&Text {
+		padding: 15px;
+		line-height: 25px;
+		@include font("Open Sans reg", 14, 400, black);
+	}
+}
+
+@each $back in first, second, third, fourth {
+	.#{$back}-image {
+		background: url("../images/#{$back}.png") center no-repeat;
+	}
+}

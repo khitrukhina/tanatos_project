@@ -1,0 +1,43 @@
+$fs-html: 16;
+$c-orange: #F7600EF9;
+
+@keyframes wiggle {
+	0%, 100% {
+		transform: translate3d(0, 0, 0);
+	}
+
+	20%, 80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%, 50%, 70% {
+		transform: translate3d(-3px, 0, 0);
+	}
+
+	40%, 60% {
+		transform: translate3d(3px, 0, 0);
+	}
+}
+
+@mixin font($font-family, $font-size, $font-weight, $color) {
+	font-family: $font-family;
+	font-size: $font-size/$fs-html + rem;
+	font-weight: $font-weight;
+	color: $color;
+}
+
+%button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+%orange-button {
+	padding: 17px 0;
+	border: 1px solid grey;
+	border-radius: 12px;
+	text-transform: uppercase;
+	@include font("Open Sans semibold", 16, 400, white);
+	@extend %button;
+}

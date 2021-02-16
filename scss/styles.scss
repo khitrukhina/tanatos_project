@@ -1,0 +1,140 @@
+@import "_variables";
+@import "banner";
+@import "services";
+@import "newsletter";
+@import "team";
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+	padding: 0;
+	margin:0;
+	border: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+input {
+	border: none;
+	outline: none;
+}
+
+button {
+	border: none;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: unset;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+	display: block;
+}
+
+ul {
+	margin: 0;
+}
+
+.container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	overflow: hidden;
+
+	@media (min-width: 576px) {
+		max-width: 540px;
+	}
+
+	@media (min-width: 768px) {
+		max-width: 720px;
+	}
+
+	@media (min-width: 992px) {
+		max-width: 960px;
+	}
+
+	@media (min-width: 1200px) {
+		max-width: 1140px;
+	}
+
+	@media (min-width: 1440px) {
+		max-width: 1200px;
+	}
+}
+
+html {
+	font-size: $fs-html + px;
+
+	@media (max-width: 576px) {
+		font-size: 22px;
+	}
+
+	@media (min-width: 577px) and (max-width: 768px) {
+		font-size: 20px;
+	}
+}
+
+.title {
+	margin: 0 auto;
+	text-align: center;
+
+	&__top {
+		text-transform: uppercase;
+		@include font("Open Sans semibold", 35, 400, black);
+
+		span {
+			@include font("Open Sans semibold", 35, 400, $c-orange);
+		}
+	}
+
+	&__main {
+		margin-top: 30px;
+		@include font("Open Sans reg", 16, 400, black);
+
+		@media (min-width: 576px) {
+			padding: 0 50px;
+		}
+
+		@media (min-width: 768px) {
+			padding: 0 100px;
+		}
+
+		@media (min-width: 992px) {
+			padding: 0 300px;
+		}
+	}
+}
+
+.line {
+	width: 265px;
+	margin: 12px auto 0;
+	height: 8px;
+	border-radius: 5px;
+	background: white;
+
+	@media (min-width: 1200px) {
+		width: 100%;
+	}
+
+	&_orange {
+		margin: 0 auto;
+		height: 6px;
+		border-radius: 5px;
+		background: $c-orange;
+		transform-origin: center;
+		transform: scaleX(0);
+		transition: all .3s linear;
+	}
+}
