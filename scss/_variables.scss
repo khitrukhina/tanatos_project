@@ -26,6 +26,11 @@ $c-orange: #F7600EF9;
 	color: $color;
 }
 
+%placeholder {
+	content: "";
+	@include font("Open Sans light", 16, 400, black);
+}
+
 %button {
 	cursor: pointer;
 	border: none;

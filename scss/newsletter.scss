@@ -26,8 +26,7 @@
 		border-radius: 15px;
 
 		&::placeholder {
-			content: "";
-			@include font("Open Sans light", 16, 400, black);
+			@extend %placeholder;
 		}
 
 		@media (min-width: 576px) {
@@ -47,6 +46,7 @@
 	& button {
 		width: 180px;
 		padding: 17px 0;
+		margin: 5px 0;
 		border-radius: 15px;
 		background: $c-orange;
 		transition: all .2s linear;
@@ -59,7 +59,7 @@
 
 		&:hover {
 			background: transparent;
-			box-shadow: 0 0 3px grey;
+			box-shadow: 0 0 3px 3px grey;
 		}
 	}
 }

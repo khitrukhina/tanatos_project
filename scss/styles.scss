@@ -3,6 +3,7 @@
 @import "services";
 @import "newsletter";
 @import "team";
+@import "sayhello";
 
 * {
   box-sizing: border-box;
@@ -18,7 +19,7 @@ img {
 	max-width: 100%;
 }
 
-input {
+input, textarea {
 	border: none;
 	outline: none;
 }
@@ -92,7 +93,7 @@ html {
 
 	&__top {
 		text-transform: uppercase;
-		@include font("Open Sans semibold", 35, 400, black);
+		@include font("Open Sans semibold", 35, 400, unset);
 
 		span {
 			@include font("Open Sans semibold", 35, 400, $c-orange);
@@ -101,7 +102,7 @@ html {
 
 	&__main {
 		margin-top: 30px;
-		@include font("Open Sans reg", 16, 400, black);
+		@include font("Open Sans reg", 16, 400, unset);
 
 		@media (min-width: 576px) {
 			padding: 0 50px;

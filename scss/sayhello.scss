@@ -1,0 +1,158 @@
+.sayhello {
+	padding: 100px 0;
+	background: linear-gradient(to bottom, rgba(53, 60, 67, 0.9), rgba(53, 60, 67, 0.9)), url("../images/city.png") center;
+	background-size: cover;
+}
+
+
+#title__top {
+	@include font("Open Sans semibold", 35, 400, white);
+}
+
+#title__main {
+	@include font("Open Sans reg", 16, 400, white);
+}
+
+.sayhello__form {
+	width: 300px;
+	margin: 100px auto 0;
+
+	@media (min-width: 576px) {
+		width: 400px;
+	}
+
+	@media (min-width: 768px) {
+		width: 500px;
+	}
+
+	@media (min-width: 992px) {
+		width: 750px;
+	}
+
+	@media (min-width: 1200px) {
+		width: 830px
+	}
+
+	.sayhello__emailSubject {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		margin-bottom: 35px;
+
+		@media (min-width: 576px) {
+			flex-direction: row;
+		}
+
+		.sayhello__email, .sayhello__subject {
+			display: block;
+			width: 100%;
+			padding: 18px;
+			background: white;
+			border-radius: 15px;
+
+			@media (min-width: 576px) {
+				width: 49%;
+			}
+
+			&::placeholder {
+				@extend %placeholder;
+			}
+		}
+
+		.sayhello__email {
+			margin-bottom: 35px;
+
+			@media (min-width: 576px) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.sayhello__textarea textarea{
+		display: block;
+		width: 100%;
+		height: 200px;
+		margin-bottom: 35px;
+		padding: 18px;
+		background: white;
+		border-radius: 15px;
+		resize: none;
+
+		&::placeholder {
+			@extend %placeholder;
+		}
+	}
+
+	.sayhello__button {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (min-width: 992px) {
+			flex-direction: row;
+		}
+
+		& button {
+			width: 215px;
+			margin-bottom: 35px;
+			border: none;
+			@extend %orange-button;
+			background: $c-orange;
+			transition: all .2s linear;
+
+			@media (min-width: 992px) {
+				margin-bottom: 5px;
+			}
+
+			&:hover {
+				background: transparent;
+				box-shadow: 0 0 3px 3px grey;
+			}
+		}
+
+		&Links {
+			display: flex;
+			width: 300px;
+			justify-content: space-between;
+
+			& a img {
+				transition: all .2s linear;
+			}
+
+			& a:hover img{
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+.footer__wrapper {
+	background: #3B434CFF;
+
+	.footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		flex-direction: column;
+		height: 70px;
+		text-transform: uppercase;
+		letter-spacing: .5px;
+		@include font("Open Sans reg", 10, 400, white);
+
+		@media (min-width: 576px) {
+			flex-direction: row;
+			justify-content: space-between;
+			height: 100px;
+			@include font("Open Sans reg", 12, 400, white);
+		}
+
+		@media (min-width: 768px) {
+			@include font("Open Sans reg", 16, 400, white);
+		}
+
+		&__designed span{
+			@include font("Open Sans reg", 16, 800, red);
+		}
+	}
+}
